@@ -167,3 +167,32 @@ isEmptyObject([])              // false
 isEmptyObject(true)            // false
 ```
 
+## 8. 实现一个 `reduce` 函数
+
+`reduce` 是函数式编程中十分重要的一个函数，请实现一个 `reduce` 函数，可以参考 `[].reduce` 。
+
+### 函数模板
+
+```javascript
+function reduce (arr, func, initialValue) {
+  // your code
+}
+```
+
+### 函数参数
+
+- `arr: Array` 调用 `reduce`  的数组
+- `func: Function` `reduce` 执行数组中每个值的函数，包含四个参数
+  - `previousValue` 上一次调用回调返回的值，或者是提供的初始值（`initialValue`）
+  - `currentValue` 数组中当前被处理的元素
+- `initialValue：mixed` 作为第一次调用 `callback` 的第一个参数。
+
+### 调用示例
+
+```javascript
+var total = reduce([0, 1, 2, 3], function (previousValue, currentValue) {
+  return previousValue + currentValue
+}, 0)
+// total === 6
+```
+
